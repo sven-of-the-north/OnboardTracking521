@@ -3,4 +3,4 @@ include 'pi', 'databaseServer', 'client'
 rootProject.name = "ots"
 project(":pi").name = "${rootProject.name}pi"
 project(":databaseServer").name = "${rootProject.name}server"
-project(":client").name = "${rootProject.name}webclient"
+project(":webserver").name = "${rootProject.name}webserver"

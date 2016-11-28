@@ -1,6 +1,6 @@
-include 'pi', 'server', 'client'
+include 'pi', 'databaseServer', 'client'
 
 rootProject.name = "ots"
 project(":pi").name = "${rootProject.name}pi"
-project(":server").name = "${rootProject.name}server"
+project(":databaseServer").name = "${rootProject.name}server"
 project(":client").name = "${rootProject.name}webclient"

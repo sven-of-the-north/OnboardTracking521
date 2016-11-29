@@ -2,3 +2,6 @@
 build
 .project
 .idea
+bin
+.classpath
+.settings

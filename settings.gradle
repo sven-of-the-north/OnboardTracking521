@@ -1,4 +1,4 @@
-include 'pi', 'databaseServer', 'client'
+include 'pi', 'databaseServer', 'webserver'
 
 rootProject.name = "ots"
 project(":pi").name = "${rootProject.name}pi"

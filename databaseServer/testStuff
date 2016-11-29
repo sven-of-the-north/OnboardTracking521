@@ -1,0 +1,25 @@
+#!/bin/sh
+
+curl -i -X POST -H "Content-Type:application/json" -d '{ "carId":"1", "time":"1", "eventName":"test", "value":"1"}'  http://localhost:8080/events
+curl -i -X POST -H "Content-Type:application/json" -d '{ "carId":"2", "time":"1", "eventName":"test", "value":"1"}'  http://localhost:8080/events
+curl -i -X POST -H "Content-Type:application/json" -d '{ "carId":"3", "time":"1", "eventName":"test", "value":"1"}'  http://localhost:8080/events
+
+curl -i -X POST -H "Content-Type:application/json" -d '{ "carId":"1", "time":"1", "eventName":"test2", "value":"1"}'  http://localhost:8080/events
+curl -i -X POST -H "Content-Type:application/json" -d '{ "carId":"2", "time":"1", "eventName":"test2", "value":"1"}'  http://localhost:8080/events
+curl -i -X POST -H "Content-Type:application/json" -d '{ "carId":"3", "time":"1", "eventName":"test2", "value":"1"}'  http://localhost:8080/events
+
+curl -i -X POST -H "Content-Type:application/json" -d '{ "carId":"1", "time":"1", "eventName":"test3", "value":"1"}'  http://localhost:8080/events
+curl -i -X POST -H "Content-Type:application/json" -d '{ "carId":"2", "time":"1", "eventName":"test3", "value":"1"}'  http://localhost:8080/events
+curl -i -X POST -H "Content-Type:application/json" -d '{ "carId":"3", "time":"1", "eventName":"test3", "value":"1"}'  http://localhost:8080/events
+
+curl -i -X POST -H "Content-Type:application/json" -d '{ "carId":"1", "time":"10", "eventName":"test", "value":"1"}'  http://localhost:8080/events
+curl -i -X POST -H "Content-Type:application/json" -d '{ "carId":"2", "time":"10", "eventName":"test", "value":"1"}'  http://localhost:8080/events
+curl -i -X POST -H "Content-Type:application/json" -d '{ "carId":"3", "time":"10", "eventName":"test", "value":"1"}'  http://localhost:8080/events
+
+curl -i -X POST -H "Content-Type:application/json" -d '{ "carId":"1", "time":"10", "eventName":"test2", "value":"1"}'  http://localhost:8080/events
+curl -i -X POST -H "Content-Type:application/json" -d '{ "carId":"2", "time":"10", "eventName":"test2", "value":"1"}'  http://localhost:8080/events
+curl -i -X POST -H "Content-Type:application/json" -d '{ "carId":"3", "time":"10", "eventName":"test2", "value":"1"}'  http://localhost:8080/events
+
+curl -i -X POST -H "Content-Type:application/json" -d '{ "carId":"1", "time":"10", "eventName":"test3", "value":"1"}'  http://localhost:8080/events
+curl -i -X POST -H "Content-Type:application/json" -d '{ "carId":"2", "time":"10", "eventName":"test3", "value":"1"}'  http://localhost:8080/events
+curl -i -X POST -H "Content-Type:application/json" -d '{ "carId":"3", "time":"10", "eventName":"test3", "value":"1"}'  http://localhost:8080/events

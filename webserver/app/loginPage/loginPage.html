@@ -29,13 +29,13 @@ div.container {
 	  <div class="visibleform">
 	  <form novalidate>
 		<font face="Verdana" size="2">Please Enter Username and Password:</font><br>
-		<input type="text" ng-model="user.username" name="username" ><br>
+		<input type="text" ng-model="user.username"><br>
 		<input type="password" ng-model="user.password"><br><br>
 		<button ng-click="newUser()">New User</button>
 		<button ng-click="login()">Login</button>
 	  </form>
 	  </div>
-	<p>form = {{user}}</p>
+	<pre>form = {{user | json}}</pre>
 	</div>
 </div>
 

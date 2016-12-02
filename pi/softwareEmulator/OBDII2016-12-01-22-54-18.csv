@@ -1,0 +1,30 @@
+C1935 ,Chime Circuit Failure
+P1270 ,Engine RPM Or Speed Limiter Reached
+U1007 ,SCP (J1850) Invalid or Missing Data for Primary Id
+P1261 ,Cylinder #1 High To Low Side Short
+B1400 ,Driver Power Window One Touch Window Relay Circuit Short To Battery
+C1091 ,Speed Wheel Sensor All Coherency Failure
+B1417 ,Power Window LR Motor Circuit Short To Ground
+B1422 ,Power Window RR Motor Circuit Failure
+B1404 ,Driver Power Window Down Circuit Open
+P1224 ,Throttle Position Sensor B Out Of Self Test Range
+C1939 ,Brake Pressure Switch Input Circuit Failure
+U1006 ,SCP (J1850) Invalid or Missing Data for Primary Id
+C1103 ,ABS Hydraulic Brake Switch Circuit Failure
+P1266 ,Cylinder #6 High To Low Side Short
+P1230 ,Fuel Pump Low Speed Malfunction
+B1424 ,Power Window RR Motor Circuit Short To Battery
+P1245 ,Alternator Load Input Failed Low
+U1009 ,SCP (J1850) Invalid or Missing Data for Engine Torque
+P1248 ,Turbo Boost Pressure Not Detected
+B1425 ,Power Window RR Motor Circuit Short To Ground
+C1959 ,Lateral Accelerometer Sensor Circuit Failure
+B1404 ,Driver Power Window Down Circuit Open
+P1268 ,Cylinder #8 High To Low Side Short
+P1264 ,Cylinder #4 High To Low Side Short
+C1963 ,Stability Control Inhibit Warning
+C1935 ,Chime Circuit Failure
+C1091 ,Speed Wheel Sensor All Coherency Failure
+B1403 ,Driver Power Window Up Switch Circuit Failure
+P1255 ,Pedal Correlation PDS2 and LPDS Low
+C1947 ,Seat Track Position Switch Circuit Short to Ground

@@ -1,0 +1,145 @@
+P1220 ,Series Throttle Control System Malfunction
+P1221 ,Traction Control System Malfunction
+P1222 ,Traction Control Output Circuit Malfunction
+P1223 ,Pedal Demand Sensor B Circuit High Input
+P1224 ,Throttle Position Sensor B Out Of Self Test Range
+P1225 ,Needle Lift Sensor Malfunction
+P1226 ,Control Sleeve Sensor Malfunction
+P1227 ,Wastegate Failed Closed (Over Pressure)
+P1228 ,Wastegate Failed Open (Under Pressure)
+P1229 ,Intercooler Pump Driver Fault
+P1230 ,Fuel Pump Low Speed Malfunction
+P1231 ,"Fuel Pump Secondary Circuit Low, High Speed"
+P1232 ,Fuel Pump Speed Primary Circuit Malfunction
+P1233 ,Fuel Pump Driver Module Off Line
+P1234 ,Fuel Pump Driver Module Off Line
+P1235 ,Fuel Pump Control Out Of Range
+P1236 ,Fuel Pump Control Out Of Range
+P1237 ,Fuel Pump Secondary Circuit Malfunction
+P1238 ,Fuel Pump Secondary Circuit Malfunction
+P1239 ,Speed Fuel Pump Positive Feed Fault
+P1240 ,Sensor Power Supply Malfunction
+P1241 ,Sensor Power Supply Low Input
+P1242 ,Sensor Power Supply High Input
+P1243 ,Second Fuel Pump Faulty or Ground Fault
+P1244 ,Alternator Load Input Failed High
+P1245 ,Alternator Load Input Failed Low
+P1246 ,Alternator Load Input Failed
+P1247 ,Turbo Boost Pressure Low
+P1248 ,Turbo Boost Pressure Not Detected
+P1249 ,Wastegate Control Valve Performance
+P1250 ,PRC Solenoid Circuit Malfunction
+P1251 ,Air Mixture Solenoid Circuit Malfunction
+P1252 ,Pedal Correlation PDS1 and LPDS High
+P1253 ,Pedal Correlation PDS1 and LPDS Low
+P1254 ,Pedal Correlation PDS2 and LPDS High
+P1255 ,Pedal Correlation PDS2 and LPDS Low
+P1256 ,Pedal Correlation PDS1 and HPDS
+P1257 ,Pedal Correlation PDS2 and HPDS
+P1258 ,Pedal Correlation PDS1 and PDS2
+P1259 ,Immobilizer to PCM Signal Error
+P1260 ,"THEFT Detected, Vehicle Immobilzed"
+P1261 ,Cylinder #1 High To Low Side Short
+P1262 ,Cylinder #2 High To Low Side Short
+P1263 ,Cylinder #3 High To Low Side Short
+P1264 ,Cylinder #4 High To Low Side Short
+P1265 ,Cylinder #5 High To Low Side Short
+P1266 ,Cylinder #6 High To Low Side Short
+P1267 ,Cylinder #7 High To Low Side Short
+P1268 ,Cylinder #8 High To Low Side Short
+P1269 ,Immobilizer Code Not Programmed
+P1270 ,Engine RPM Or Speed Limiter Reached
+C1091 ,Speed Wheel Sensor All Coherency Failure
+C1095 ,ABS Hydraulic Pump Motor Circuit Failure
+C1096 ,ABS Hydraulic Pump Motor Circuit Open
+C1097 ,ABS Hydraulic Pump Motor Circuit Short To Ground
+C1098 ,ABS Hydraulic Pump Motor Circuit Short To Battery
+C1100 ,ABS Pump Switch Circuit Failure
+C1101 ,ABS Hydraulic Valve Circuit Failure
+C1102 ,ABS Acceleration Switch Circuit Failure
+C1103 ,ABS Hydraulic Brake Switch Circuit Failure
+C1104 ,Traction Control Active Lamp - Circuit Short to Battery
+C1105 ,Traction Control Disable Lamp - Circuit Short to Battery
+C1106 ,Traction Control Disable Switch Circuit Short to Battery
+C1107 ,ABS Function Enabled Input Circuit Failure
+C1109 ,Speed Control Actuator Assembly Cable Release Failure
+C1110 ,ABS Power Relay Coil Circuit Failure
+C1111 ,ABS Power Relay Coil Open Circuit
+C1112 ,ABS Power Relay Coil Short Circuit To Ground
+C1113 ,ABS Power Relay Coil Short Circuit To Battery
+C1114 ,ABS Power Relay Output Short Circuit To Ground
+C1115 ,ABS Power Relay Output Short Circuit To Battery
+C1116 ,Starter Motor Circuit Failure
+C1117 ,RPM Input Circuit Failure
+C1123 ,Vehicle Speed Sensor Input Short to Battery
+C1933 ,Solenoid Current Out Of Range
+C1934 ,HPU (Hydraulic Pump Unit) Pressurisation Failure
+C1935 ,Chime Circuit Failure
+C1936 ,Hydraulic Pump Relay Circuit Failure
+C1937 ,Steering Wheel Angle Sensor Offset Failure
+C1938 ,Invalid Steering Wheel Angle Sensor ID
+C1939 ,Brake Pressure Switch Input Circuit Failure
+C1940 ,Brake Pressure Switch Mechanical Failure
+C1942 ,Unrecognized Powertrain Configuration
+C1943 ,Airbag Deployment Indication Input Fault
+C1944 ,Gauge Driver Circuit Fault
+C1945 ,Park Switch Indicates Park with Vehicle Moving
+C1946 ,Seat Track Position Switch Circuit Open
+C1947 ,Seat Track Position Switch Circuit Short to Ground
+C1948 ,Seat Track Position Switch Circuit Resistance Out of Range
+C1949 ,Accelerometer Sensor Circuit Open
+C1950 ,Accelerometer Sensor Circuit Failure
+C1951 ,Lateral Accelerometer Sensor Circuit Open
+C1952 ,Yaw Rate Sensor Circuit Open
+C1953 ,Master Cylinder Pressure Sensor Circuit Open
+C1954 ,Master Cylinder Pressure Sensor Circuit Failure
+C1955 ,Steering Angle Sensor Circuit Open
+C1956 ,Steering Angle Sensor Circuit Failure
+C1957 ,Dynamic Stability Control Valve RF Circuit Failure
+C1958 ,Dynamic Stability Control Valve LF Circuit Failure
+C1959 ,Lateral Accelerometer Sensor Circuit Failure
+C1960 ,Driver Brake Apply Circuit Fault
+C1961 ,Park Lamp Relay Coil Circuit Failure
+C1962 ,Park Lamp Relay Coil Short to Battery
+C1963 ,Stability Control Inhibit Warning
+B1400 ,Driver Power Window One Touch Window Relay Circuit Short To Battery
+B1401 ,Driver Power Window One Touch Window Relay Circuit Short To Ground
+B1402 ,Driver Power Window Down Switch Circuit Failure
+B1403 ,Driver Power Window Up Switch Circuit Failure
+B1404 ,Driver Power Window Down Circuit Open
+B1405 ,Driver Power Window Down Circuit Short To Battery
+B1406 ,Driver Power Window Down Circuit Short To Ground
+B1407 ,Driver Power Window Up Circuit Open
+B1408 ,Driver Power Window Up Circuit Short To Battery
+B1409 ,Driver Power Window Up Circuit Short To Ground
+B1410 ,Driver Power Window Motor Circuit Failure
+B1411 ,Driver Power Window Motor Circuit Open
+B1412 ,Driver Power Window Motor Circuit Short To Battery
+B1413 ,Driver Power Window Motor Circuit Short To Ground
+B1414 ,Power Window LR Motor Circuit Failure
+B1415 ,Power Window LR Motor Circuit Open
+B1416 ,Power Window LR Motor Circuit Short To Battery
+B1417 ,Power Window LR Motor Circuit Short To Ground
+B1418 ,Passenger Power Window Motor Circuit Failure
+B1419 ,Passenger Power Window Motor Circuit Open
+B1420 ,Passenger Power Window Motor Circuit Short To Battery
+B1421 ,Passenger Power Window Motor Circuit Short To Ground
+B1422 ,Power Window RR Motor Circuit Failure
+B1423 ,Power Window RR Motor Circuit Open
+B1424 ,Power Window RR Motor Circuit Short To Battery
+B1425 ,Power Window RR Motor Circuit Short To Ground
+B1426 ,Lamp Seat Belt Circuit Short To Battery
+B1427 ,Lamp Seat Belt Circuit Open
+B1428 ,Lamp Seat Belt Circuit Failure
+B1429 ,Lamp Seat Belt Circuit Short To Ground
+B1430 ,Seat Belt Switch Circuit Short To Ground
+U1000 ,SCP (J1850) Invalid or Missing Data for Primary Id
+U1001 ,SCP (J1850) Invalid or Missing Data for Primary Id
+U1002 ,SCP (J1850) Invalid or Missing Data for Primary Id
+U1003 ,SCP (J1850) Invalid or Missing Data for Primary Id
+U1004 ,SCP (J1850) Invalid or Missing Data for EEC Programming
+U1005 ,SCP (J1850) Invalid or Missing Data for EEC Programming
+U1006 ,SCP (J1850) Invalid or Missing Data for Primary Id
+U1007 ,SCP (J1850) Invalid or Missing Data for Primary Id
+U1008 ,SCP (J1850) Invalid or Missing Data for Engine Torque
+U1009 ,SCP (J1850) Invalid or Missing Data for Engine Torque

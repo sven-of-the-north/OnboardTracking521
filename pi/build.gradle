@@ -1,38 +1,48 @@
 buildscript {
-	ext.kotlin_version = '1.0.4'
+    ext.kotlin_version = '1.0.4'
 
-	repositories {
-		mavenCentral()
-		maven {
-			url "https://plugins.gradle.org/m2/"
-		}
-	}
+    repositories {
+        mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
 
-	dependencies {
-		classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-		classpath "com.netflix.nebula:gradle-ospackage-plugin:4.+"
-	}
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:1.4.1.RELEASE"
+        classpath "com.netflix.nebula:gradle-ospackage-plugin:4.+"
+    }
 }
 
 apply plugin: 'idea'
 apply plugin: 'eclipse'
 apply plugin: 'nebula.deb'
+apply plugin: 'spring-boot'
 apply plugin: 'kotlin'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 version = rootProject.version
 
 repositories {
-	mavenCentral()
+    mavenCentral()
 }
 
 dependencies {
-	compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
 
-task ('package', type: Deb) {
-	release '1'
-	into "/opt/${project.name}"
-	from(jar.outputs.files) {
-		into 'lib'
-	}
+springBoot {
+    mainClass = 'com.ots.server.Application'
+}
+
+task('package', type: Deb) {
+    release '1'
+    into "/opt/${project.name}"
+    from(jar.outputs.files) {
+        into 'lib'
+    }
 }

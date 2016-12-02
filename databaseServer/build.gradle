@@ -42,9 +42,10 @@ springBoot {
 }
 
 task ('package', type: Deb) {
+	dependsOn bootRepackage
 	release '1'
 	into "/opt/${project.name}"
-	from(bootRepackage.outputs.files) {
+	from(jar.outputs.files) {
 		into 'lib'
 	}
 }

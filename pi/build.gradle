@@ -35,12 +35,9 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
 
-springBoot {
-    mainClass = 'com.ots.server.Application'
-}
-
 task('package', type: Deb) {
-    release '1'
+	dependsOn bootRepackage
+	release '1'
     into "/opt/${project.name}"
     from(jar.outputs.files) {
         into 'lib'

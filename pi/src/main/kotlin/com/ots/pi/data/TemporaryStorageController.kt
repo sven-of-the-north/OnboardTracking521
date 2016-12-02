@@ -8,9 +8,9 @@ class TemporaryStorageController {
     private val codesToBeSent: MutableList<OBDIICode> = mutableListOf()
     private val lock: Any = Any()
 
-    fun store(code: String, name: String) {
+    fun store(code: String, name: String, unixTime: Long) {
         synchronized(lock) {
-            codesToBeSent.add(OBDIICode(code, name))
+            codesToBeSent.add(OBDIICode(code, name, unixTime))
         }
     }
 

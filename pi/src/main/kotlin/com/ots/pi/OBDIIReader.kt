@@ -39,11 +39,13 @@ class OBDIIReader(val filter: OBDIIFilter, val storageController: TemporaryStora
         val latestFile = findFileToRead()
         if (latestFile !== null) {
             val filteredCodes: List<String>? = filter.filterFile(latestFile)
+            LOGGER.info("Storing $filteredCodes")
             filteredCodes?.forEach {
                 val splitCode: List<String> = it.split(",")
                 try {
                     val code: String = splitCode[0].replace(" ", "")
-                    storageController.store(code, splitCode[1])
+                    val unixTime: Long = System.currentTimeMillis() / 1000L
+                    storageController.store(code, splitCode[1], unixTime)
                 } catch(e: NumberFormatException) {
                     LOGGER.warning("NumberFormatException in reader")
                 }

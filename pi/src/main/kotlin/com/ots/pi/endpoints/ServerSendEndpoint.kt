@@ -1,4 +1,4 @@
-package com.ots.pi.data.endpoints
+package com.ots.pi.endpoints
 
 import org.springframework.http.HttpStatus
 import org.springframework.stereotype.Controller

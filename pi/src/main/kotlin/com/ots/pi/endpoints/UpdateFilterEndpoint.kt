@@ -1,3 +1,3 @@
-package com.ots.pi.data.endpoints
+package com.ots.pi.endpoints
 
 class UpdateFilterEndpoint

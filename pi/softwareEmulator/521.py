@@ -18,4 +18,5 @@ while (1):
             for i, line in enumerate(code_file):
                 if i == g:
                     f1.write(line)
+    f1.close()
     time.sleep(delay)

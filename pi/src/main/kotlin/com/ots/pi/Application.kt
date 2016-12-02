@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.context.annotation.Bean
 import org.springframework.scheduling.TaskScheduler
 import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler
+import org.springframework.web.client.RestTemplate
 import java.io.File
 import kotlin.system.exitProcess
 
@@ -26,6 +27,11 @@ open class Application {
     @Bean
     open fun taskScheduler(): TaskScheduler {
         return ThreadPoolTaskScheduler()
+    }
+
+    @Bean
+    open fun restTemplate(): RestTemplate {
+        return RestTemplate()
     }
 
     @Bean

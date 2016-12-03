@@ -8,8 +8,6 @@ import org.springframework.context.annotation.Bean
 import org.springframework.scheduling.TaskScheduler
 import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler
 import org.springframework.web.client.RestTemplate
-import java.io.File
-import kotlin.system.exitProcess
 
 @SpringBootApplication
 open class Application {
@@ -38,18 +36,7 @@ open class Application {
     open fun schedulingRunner(scheduler: TaskScheduler, obdiiReader: OBDIIReader): CommandLineRunner {
         return object : CommandLineRunner {
             override fun run(vararg args: String?) {
-                if (args.size != 1) {
-                    println("Must pass directory location of OBDII csv files")
-                    exitProcess(1)
-                }
-                val rootDirectoryString: String? = args[0]
-                val rootDirectory: File = File(rootDirectoryString)
-                if (rootDirectory.isDirectory) {
-                    scheduler.scheduleAtFixedRate(obdiiReader, 5000)
-                } else {
-                    println("Second argument must be a valid directory")
-                    exitProcess(1)
-                }
+                scheduler.scheduleAtFixedRate(obdiiReader, 5000)
             }
         }
     }

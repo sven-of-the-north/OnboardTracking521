@@ -1,5 +1,5 @@
-angular.module('myApp', [])
-	.controller('formCtrl', function($scope) {
+angular.module('loginPage', [])
+	.controller('loginCtrl', function($scope) {
     $scope.user = {
         username:"username", 
         password:"password"};
@@ -8,6 +8,6 @@ angular.module('myApp', [])
                                                       " Password: " + $scope.user.password );
 	};
 	$scope.newUser = function() {
-		alert("TODO: go to new user creation page");
-    };
+		location.href = 'newUser/newUser.html';
+	};
 });

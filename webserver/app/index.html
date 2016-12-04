@@ -18,20 +18,19 @@ div.container {
     left: 50%;
     transform: translate( -50%, -50%) ;
 </style>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 </head>
 
 <body>
 
 <div class="container">
 <h1><font face ="Verdana">Onboard Diagnostic Monitoring</font></h1>
-	<div ng-app="myApp" ng-controller="formCtrl">
+	<div ng-app="loginPage" ng-controller="loginCtrl">
 	  <div class="visibleform">
 	  <form novalidate>
-		<font face="Verdana" size="2">Please Enter Username and Password:</font><br>
+		<font face="Verdana" size="2">Please enter Username and Password:</font><br>
 		<input type="text" ng-model="user.username"><br>
 		<input type="password" ng-model="user.password"><br><br>
-		<button onclick="location.href='newUser/newUser.html';">New User</button>
+		<button ng-click="newUser()">New User</button>
 		<button ng-click="login()">Login</button>
 	  </form>
 	  </div>
@@ -39,7 +38,8 @@ div.container {
 	</div>
 </div>
 
-<script src="loginPage.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="index.js"></script>
 
 </body>
 </html>

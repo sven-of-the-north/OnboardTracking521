@@ -1,10 +1,18 @@
-angular.module('newUserPage', ['ngCookies'])
-	.controller('newUserCtrl', ['$scope', '$cookies', function($scope, $cookies) {
+var newUserApp = angular.module('newUserPage', ['ngCookies']);
+
+newUserApp.config(['$cookiesProvider', function($cookiesProvider) {
+		$cookiesProvider.defaults.path='/';
+		$cookiesProvider.defaults.domain='localhost';
+	}]);
+	
+newUserApp.controller('newUserCtrl', ['$scope', '$cookies',
+	function($scope, $cookies) {
 		$scope.user = {
 			username: "username", 
 			password: "password",
 			type: ""};
 		$scope.retrieved = "";
+	
 		$scope.createNewUser = function() {
 			var newUser = {
 				username: $scope.user.username,

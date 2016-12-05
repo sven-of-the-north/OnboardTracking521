@@ -12,6 +12,7 @@
 	</h1>
 	
 	<div class="visibleform">
+
 		<table>
 			<tr>
 				<td>
@@ -76,23 +77,26 @@
 		
 		<br>
 		</form>
-			<table border="1">
-			<tr>
-				<td>Time Stamp</td>
-				<td>Fuel Pump Status</td>
-				<td>Engine RPM</td>
-				<td>Seat Belt Status</td>
-				<td>ABS Status</td>
-			</tr>
-			<tr>
-				<td>Row 1, Column 2</td>
-				<td>Row 2, Column 2</td>
-				<td>Row 3, Column 2</td>
-				<td>Row 4, Column 2</td>
-				<td>Row 5, Column 2</td>
-			</tr>
-		</table>
+			<table border="1" width=100%>
+				<tr>
+					<th>Car Id</th>
+					<th>Time Stamp</th>
+					<th>Event Name</th>
+					<th>Value</th>
+				</tr>
+				<tr ng-repeat = "event in dataList"> 
+					<td>{{ event.carId }}</td>
+					<td>{{ event.timeStamp }}</td>
+					<td>{{ event.eventName }}</td>
+					<td>{{ event.value }}</td>
+				</tr>
+			</table>
+		
+		<br>
 		<button ng-click="test()">test</button>
+		
+		<br>
+		<pre>time = {{ ctrl | json }}</pre>
 
 <script src="../bower_components/angular/angular.js"></script>
 <script src="../bower_components/moment/min/moment-with-locales.min.js"></script>

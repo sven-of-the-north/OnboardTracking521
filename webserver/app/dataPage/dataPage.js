@@ -1,6 +1,6 @@
 angular
-	.module('driverPageApp', ['moment-picker'])
-	.controller('driverPageCtrl', ['$scope', '$http', function($scope, $http) {
+	.module('driverPageApp', ['moment-picker', 'ngCookies'])
+	.controller('driverPageCtrl', ['$scope', '$http', '$cookies', function($scope, $http, $cookies) {
 		$http({
 			method: 'GET',
 			url: 'http://localhost:8080/events'
@@ -22,6 +22,17 @@ angular
 			alert('Error retrieving event log');
 			console.log(response);
 		});
+		
+		$scope.filterByCarId = function () {
+			console.log($cookies.getObject('userList')[0].id);
+			console.log($scope.event.carId);
+			if($cookies.getObject('userList')[0].type == 'driver') {
+				return ($cookies.getObject('userList')[0].id == $scope.event.carId);			
+			}
+			else {
+				return true;
+			}
+		}
 
 /** using CORS **/		
 //		var request = createCORSRequest("get", "http://localhost:8080/events/");

@@ -9,6 +9,7 @@ newUserApp.controller('newUserCtrl', ['$scope', '$cookies', function($scope, $co
 	$scope.user = {
 		username: "username", 
 		password: "password",
+		id: "1",
 		type: ""};
 	$scope.retrieved = "";
 
@@ -16,7 +17,8 @@ newUserApp.controller('newUserCtrl', ['$scope', '$cookies', function($scope, $co
 		var newUser = {
 			username: $scope.user.username,
 			password: $scope.user.password,
-			type: $scope.user.type
+			id: $scope.user.id,
+			type: $scope.user.type,
 		};
 		
 		var retrievedList = $cookies.getObject('userList');

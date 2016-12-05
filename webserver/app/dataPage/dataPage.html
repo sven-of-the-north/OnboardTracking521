@@ -74,7 +74,7 @@
 				</td>
 			</tr>
 		</table>
-		
+
 		<br>
 		</form>
 			<table border="1" width=100%>
@@ -84,16 +84,16 @@
 					<th>Event Name</th>
 					<th>Value</th>
 				</tr>
-				<tr ng-repeat = "event in dataList" ng-show = "displayRow(event.timeStamp)"> 
+				<tr ng-repeat = "event in dataList" ng-show = "displayRow(event)">
 					<td>{{ event.carId }}</td>
 					<td>{{ event.timeStamp * 1000 | date:'yyyy-MM-dd HH:mm:ss Z'}}</td>
 					<td>{{ event.eventName }}</td>
 					<td>{{ event.value }}</td>
 				</tr>
 			</table>
-		
+
 		<br>
-		<button ng-click="test()">test</button>
+		<button ng-click="logout()">Logout</button>
 		
 		<br>
 		<pre>time = {{ ctrl | json }}</pre>

@@ -13,7 +13,7 @@ import java.net.URL
 open class ServerSendEndpoint(val serverWriter: ServerWriter) {
     @RequestMapping(method = arrayOf(RequestMethod.GET))
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    fun doGet(@RequestParam("address") address: String) {
-        serverWriter.send(URL(address))
+    fun doGet(@RequestParam("address") address: String, @RequestParam("carId") carId: Int) {
+        serverWriter.send(URL(address), carId)
     }
 }

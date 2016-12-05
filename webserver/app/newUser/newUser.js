@@ -18,7 +18,7 @@ newUserApp.controller('newUserCtrl', ['$scope', '$cookies', function($scope, $co
 			username: $scope.user.username,
 			password: $scope.user.password,
 			id: $scope.user.id,
-			type: $scope.user.type,
+			type: $scope.user.type
 		};
 		
 		var retrievedList = $cookies.getObject('userList');

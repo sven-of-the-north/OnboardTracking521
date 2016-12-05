@@ -10,16 +10,16 @@ import java.util.logging.Logger
 @Component
 open class ServerWriter(val storageController: TemporaryStorageController, val restTemplate: RestTemplate) {
     private val LOGGER = Logger.getLogger("ServerWriter")
-    fun send(url: URL) {
+    fun send(url: URL, carId: Int) {
         val obdiiList: List<OBDIICode>? = storageController.retrieve()
         LOGGER.info("Retrieved $obdiiList")
         obdiiList?.forEach {
-            sendDataToServer(it, url)
+            sendDataToServer(it, url, carId)
         }
     }
 
-    private fun sendDataToServer(obdiiCode: OBDIICode, url: URL) {
-        val jsonObject: JsonOBDIICode = JsonOBDIICode(1, obdiiCode.timestamp, obdiiCode.code, obdiiCode.name)
+    private fun sendDataToServer(obdiiCode: OBDIICode, url: URL, carId: Int) {
+        val jsonObject: JsonOBDIICode = JsonOBDIICode(carId, obdiiCode.timestamp, obdiiCode.code, obdiiCode.name)
         restTemplate.postForLocation(url.toString(), jsonObject)
     }
 

@@ -22,17 +22,6 @@ angular
 			alert('Error retrieving event log');
 			console.log(response);
 		});
-		
-		$scope.filterByCarId = function () {
-			console.log($cookies.getObject('userList')[0].id);
-			console.log($scope.event.carId);
-			if($cookies.getObject('userList')[0].type == 'driver') {
-				return ($cookies.getObject('userList')[0].id == $scope.event.carId);			
-			}
-			else {
-				return true;
-			}
-		}
 
 /** using CORS **/		
 //		var request = createCORSRequest("get", "http://localhost:8080/events/");
@@ -44,15 +33,23 @@ angular
 //			request.send();
 //		}
 		
-		$scope.test = function () {
-			console.log($scope.ctrl);
+		$scope.logout = function () {
+			$cookies.remove('activeUser');
+			console.log("GOODBYE COOKIE");
+			location.href = '../index.html';
 		}
-		
+
 		// time filtering function for data table displaying
-		$scope.displayRow = function(currentTime){
-		
+		$scope.displayRow = function(event){
+
+            var currentTime = event.timeStamp;
+            var activeUser = $cookies.getObject('activeUser');
+
+            if(activeUser.type == 'driver' && !(activeUser.id == event.carId))
+                return false;
+
 			if(typeof $scope.ctrl == 'undefined')
-				return false;
+				return true;
 				
 			var startTD = $scope.ctrl.startDate + ' ' + $scope.ctrl.startTime;
 			var startUnix = moment(startTD).unix();

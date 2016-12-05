@@ -1,43 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<style>
-h1 {
-    text-align: center;
-}
-div.visibleform {
-    width: 300px;
-    margin: auto;
-    padding: 10px;
-    border: 5px solid black;
-}
-div.container {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate( -50%, -50%) ;
-</style>
+<link rel="stylesheet" type="text/css" href="styleSheet.css">
 </head>
 
-<body>
-
+<body ng-app="loginPage" ng-controller="loginCtrl">
 <div class="container">
-<h1><font face ="Verdana">Onboard Diagnostic Monitoring</font></h1>
-	<div ng-app="loginPage" ng-controller="loginCtrl">
-	  <div class="visibleform">
-	  <form novalidate>
-		<font face="Verdana" size="2">Please enter Username and Password:</font><br>
-		<input type="text" ng-model="user.username"><br>
+	<font face="Verdana">
+	<h1>Onboard Diagnostic Monitoring</h1>
+	<h2>Login</h2>
+	</font>
+	<div class="visibleform">
+		<form novalidate>
+		<font face="Verdana" size="3">Please enter Username and Password:</font><br><br>
+		
+		<input type="text" ng-model="user.username"><br><br>
 		<input type="password" ng-model="user.password"><br><br>
-		<button ng-click="newUser()">New User</button>
+		
 		<button ng-click="login()">Login</button>
-	  </form>
-	  </div>
-	<p id='LoginStatus'></p>
+		<button ng-click="newUser()">New User</button>
+		</form>
+	</div>
 	<pre>form = {{user | json}}</pre>
 	<pre>loginSuccess = {{ loginSuccess }}</pre>
-	</div>
 </div>
 
 <script src="bower_components/angular/angular.js"></script>
@@ -45,4 +30,5 @@ div.container {
 <script src="index.js"></script>
 
 </body>
+
 </html>

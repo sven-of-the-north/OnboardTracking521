@@ -1,3 +1,3 @@
-angular.module('myApp', [])
-	.controller('formCtrl', function($scope) {
+angular.module('driverPageApp', [])
+	.controller('driverPageCtrl', function($scope) {
 });

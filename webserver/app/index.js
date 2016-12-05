@@ -17,7 +17,8 @@ angular.module('loginPage', ['ngCookies'])
 			if( retrievedList[i].username == $scope.user.username &&
 				retrievedList[i].password == $scope.user.password )
 				{
-					$scope.loginSuccess = true;	// TODO: implement actual login here.
+					$scope.loginSuccess = true;	
+					location.href = 'dataPage/dataPage.html';
 					break;
 				}
 		}

@@ -1,32 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<style>
-h1 {
-    text-align: center;
-}
-div.visibleform {
-    width: 300px;
-    margin: auto;
-    padding: 10px;
-    border: 5px solid black;
-}
-div.container {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate( -50%, -50%) ;
-</style>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../styleSheet.css">
 </head>
-
-<body>
+<body ng-app="driverPageApp" ng-controller="driverPageCtrl">
 
 <div class="container">
-<h1><font face ="Verdana">Data Page</font></h1>
+<h1>
+<font face ="Verdana">Data Page</font>
+</h1>
 
-	<div ng-app="myApp" ng-controller="formCtrl">
 	  <div class="visibleform">
 		<form>
 		<select disabled name="car id">
@@ -59,9 +42,10 @@ div.container {
 				<td>Row 5, Column 2</td>
 			</tr>
 		</table>
-	  </div>
+		
 </div>
 
+<script src="../bower_components/angular/angular.js"></script>
 <script src="dataPage.js"></script>
 
 </body>

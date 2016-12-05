@@ -52,7 +52,7 @@ angular
 		$scope.displayRow = function(currentTime){
 		
 			if(typeof $scope.ctrl == 'undefined')
-				return false;
+				return true;
 				
 			var startTD = $scope.ctrl.startDate + ' ' + $scope.ctrl.startTime;
 			var startUnix = moment(startTD).unix();

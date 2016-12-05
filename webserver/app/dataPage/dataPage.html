@@ -9,21 +9,15 @@
 <h1>
 <font face ="Verdana">Data Page</font>
 </h1>
-
-	  <div class="visibleform">
 		<form>
-		<select disabled name="car id">
-			<option value="0">Car ID</option>
-			<option value="1">Car 1</option>
-			<option value="2">Car 2</option>
-			<option value="3">Car 3</option>
-			<option value="4">Car 4</option>
-			<option value="5">Car 5</option>
-			<option value="6">Car 6</option>
-			<option value="7">Car 7</option>
-			<option value="8">Car 8</option>
-			<option value="9">Car 9</option>
-			<option value="10">Car 10</option>
+		Start
+		<input type="time" name="startTime">
+		<input type="date" name="startDate">
+		End
+		<input type="time" name="endTime">
+		<input type="date" name="endDate">
+		<select disabled name="tableView">
+			<option value="0">Status</option>
 		</select>
 		</form>
 			<table border="1">
@@ -42,8 +36,6 @@
 				<td>Row 5, Column 2</td>
 			</tr>
 		</table>
-		
-</div>
 
 <script src="../bower_components/angular/angular.js"></script>
 <script src="dataPage.js"></script>

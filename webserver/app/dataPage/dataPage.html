@@ -31,7 +31,7 @@
 				<td>
 					<div moment-picker="ctrl.startDate"
 						 locale="en-ca"
-						 format="LL"
+						 format="L"
 						 min-view="year"
 						 max-view="day"
 						 start-view="month"
@@ -59,7 +59,7 @@
 				<td>
 					<div moment-picker="ctrl.endDate"
 						 locale="en-ca"
-						 format="LL"
+						 format="L"
 						 min-view="year"
 						 max-view="day"
 						 start-view="month"
@@ -84,9 +84,9 @@
 					<th>Event Name</th>
 					<th>Value</th>
 				</tr>
-				<tr ng-repeat = "event in dataList"> 
+				<tr ng-repeat = "event in dataList" ng-show = "displayRow(event.timeStamp)"> 
 					<td>{{ event.carId }}</td>
-					<td>{{ event.timeStamp }}</td>
+					<td>{{ event.timeStamp * 1000 | date:'yyyy-MM-dd HH:mm:ss Z'}}</td>
 					<td>{{ event.eventName }}</td>
 					<td>{{ event.value }}</td>
 				</tr>

@@ -36,6 +36,25 @@ angular
 		$scope.test = function () {
 			console.log($scope.ctrl);
 		}
+		
+		// time filtering function for data table displaying
+		$scope.displayRow = function(currentTime){
+		
+			if(typeof $scope.ctrl == 'undefined')
+				return false;
+				
+			var startTD = $scope.ctrl.startDate + ' ' + $scope.ctrl.startTime;
+			var startUnix = moment(startTD).unix();
+			var endTD = $scope.ctrl.endDate + ' ' + $scope.ctrl.endTime;
+			var endUnix = moment(endTD).unix();
+			
+			if (startUnix <= currentTime && currentTime <= endUnix){
+				return true;
+			}
+			else{
+				return false;
+			}
+		}			
 	}
 ]);
 

@@ -6,12 +6,87 @@
 <body ng-app="driverPageApp" ng-controller="driverPageCtrl">
 
 <div class="container">
-<h1>
-<font face ="Verdana">Data Page</font>
-</h1>
-
-	  <div class="visibleform">
-		<form>
+	<h1>
+	<font face ="Verdana">Data Page</font>
+	</h1>
+	
+	<div class="visibleform">
+		<table>
+			<tr>
+				<td>
+					<div moment-picker="ctrl.startTime"
+						 format="hh"
+						 min-view="day"
+						 max-view="day"
+						 autoclose="true">
+						 <input class="form-control" 
+								placeholder="Select a Start time"
+								ng-model="ctrl.startTime" 
+								ng-model-options="{ updateOn: 'blur' }">
+					</div>
+				</td>
+				<td>
+					<div moment-picker="ctrl.startDate"
+						 locale="en-ca"
+						 format="LL"
+						 min-view="year"
+						 max-view="day"
+						 start-view="month"
+						 autoclose="true"
+						 today="true"
+						 keyboard="true">
+						 <input class="form-control" 
+								placeholder="Select a Start date"
+								ng-model="ctrl.startDate" 
+								ng-model-options="{ updateOn: 'blur' }">
+					</div>
+				</td>
+				<td>
+					<div moment-picker="ctrl.endTime"
+						 format="hh"
+						 min-view="day"
+						 max-view="day"
+						 autoclose="true">
+						 <input class="form-control" 
+								placeholder="Select an End time"
+								ng-model="ctrl.endTime" 
+								ng-model-options="{ updateOn: 'blur' }">
+					</div>
+				</td>
+				<td>
+					<div moment-picker="ctrl.endDate"
+						 locale="en-ca"
+						 format="LL"
+						 min-view="year"
+						 max-view="day"
+						 start-view="month"
+						 autoclose="true"
+						 today="true"
+						 keyboard="true">
+						 <input class="form-control" 
+								placeholder="Select an End date"
+								ng-model="ctrl.endDate" 
+								ng-model-options="{ updateOn: 'blur' }">
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					{{ ctrl.startTime }}
+				</td>
+				<td>
+					{{ ctrl.startDate }}
+				</td>
+				<td>
+					{{ ctrl.endTime }}
+				</td>			
+				<td>
+					{{ ctrl.endDate }}
+				</td>
+			</tr>
+		</table>
+		
+		<br>
 		<select disabled name="car id">
 			<option value="0">Car ID</option>
 			<option value="1">Car 1</option>
@@ -46,6 +121,9 @@
 </div>
 
 <script src="../bower_components/angular/angular.js"></script>
+<script src="../bower_components/moment/min/moment-with-locales.js"></script>
+<script src="../bower_components/angular-moment-picker/angular-moment-picker.js"></script>
+<link href="../bower_components/angular-moment-picker/angular-moment-picker.css" rel="stylesheet">
 <script src="dataPage.js"></script>
 
 </body>

@@ -21,14 +21,14 @@ angular
 //		});
 
 /** using CORS **/		
-//		var request = createCORSRequest("get", "http://localhost:8080/events/");
-//		if (request){
-//			request.onload = function() {
-//				console.log(request);
-//			};
-//
-//			request.send();
-//		}
+		var request = createCORSRequest("get", "http://localhost:8080/events/");
+		if (request){
+			request.onload = function() {
+				console.log(request);
+			};
+
+			request.send();
+		}
 		
 		$scope.test = function () {
 			console.log($scope.ctrl);
@@ -37,15 +37,15 @@ angular
 ]);
 
 /** using CORS **/		
-//function createCORSRequest(method, url){
-//    var xhr = new XMLHttpRequest();
-//    if ("withCredentials" in xhr){
-//        xhr.open(method, url, true);
-//    } else if (typeof XDomainRequest != "undefined"){
-//        xhr = new XDomainRequest();
-//        xhr.open(method, url);
-//    } else {
-//        xhr = null;
-//    }
-//    return xhr;
-//}
+function createCORSRequest(method, url){
+    var xhr = new XMLHttpRequest();
+    if ("withCredentials" in xhr){
+        xhr.open(method, url, true);
+    } else if (typeof XDomainRequest != "undefined"){
+        xhr = new XDomainRequest();
+        xhr.open(method, url);
+    } else {
+        xhr = null;
+    }
+    return xhr;
+}

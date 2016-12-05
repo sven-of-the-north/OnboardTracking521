@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+h1 {
+    text-align: center;
+}
+div.visibleform {
+    width: 300px;
+    margin: auto;
+    padding: 10px;
+    border: 5px solid black;
+}
+div.container {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50%) ;
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+<h1><font face ="Verdana">Data Page</font></h1>
+
+	<div ng-app="myApp" ng-controller="formCtrl">
+	  <div class="visibleform">
+		<form>
+		<select disabled name="car id">
+			<option value="0">Car ID</option>
+			<option value="1">Car 1</option>
+			<option value="2">Car 2</option>
+			<option value="3">Car 3</option>
+			<option value="4">Car 4</option>
+			<option value="5">Car 5</option>
+			<option value="6">Car 6</option>
+			<option value="7">Car 7</option>
+			<option value="8">Car 8</option>
+			<option value="9">Car 9</option>
+			<option value="10">Car 10</option>
+		</select>
+		</form>
+			<table border="1">
+			<tr>
+				<td>Time Stamp</td>
+				<td>Fuel Pump Status</td>
+				<td>Engine RPM</td>
+				<td>Seat Belt Status</td>
+				<td>ABS Status</td>
+			</tr>
+			<tr>
+				<td>Row 1, Column 2</td>
+				<td>Row 2, Column 2</td>
+				<td>Row 3, Column 2</td>
+				<td>Row 4, Column 2</td>
+				<td>Row 5, Column 2</td>
+			</tr>
+		</table>
+	  </div>
+</div>
+
+<script src="dataPage.js"></script>
+
+</body>
+</html>
+
+

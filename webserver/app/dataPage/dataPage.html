@@ -16,10 +16,11 @@
 			<tr>
 				<td>
 					<div moment-picker="ctrl.startTime"
-						 format="hh"
+						 format="HH"
 						 min-view="day"
 						 max-view="day"
-						 autoclose="true">
+						 autoclose="true"
+						 id="picker_id">
 						 <input class="form-control" 
 								placeholder="Select a Start time"
 								ng-model="ctrl.startTime" 
@@ -44,7 +45,7 @@
 				</td>
 				<td>
 					<div moment-picker="ctrl.endTime"
-						 format="hh"
+						 format="HH"
 						 min-view="day"
 						 max-view="day"
 						 autoclose="true">
@@ -71,36 +72,9 @@
 					</div>
 				</td>
 			</tr>
-			<tr>
-				<td>
-					{{ ctrl.startTime }}
-				</td>
-				<td>
-					{{ ctrl.startDate }}
-				</td>
-				<td>
-					{{ ctrl.endTime }}
-				</td>			
-				<td>
-					{{ ctrl.endDate }}
-				</td>
-			</tr>
 		</table>
 		
 		<br>
-		<select disabled name="car id">
-			<option value="0">Car ID</option>
-			<option value="1">Car 1</option>
-			<option value="2">Car 2</option>
-			<option value="3">Car 3</option>
-			<option value="4">Car 4</option>
-			<option value="5">Car 5</option>
-			<option value="6">Car 6</option>
-			<option value="7">Car 7</option>
-			<option value="8">Car 8</option>
-			<option value="9">Car 9</option>
-			<option value="10">Car 10</option>
-        </select>
 		</form>
 			<table border="1">
 			<tr>
@@ -118,6 +92,7 @@
 				<td>Row 5, Column 2</td>
 			</tr>
 		</table>
+		<button ng-click="test()">test</button>
 
 <script src="../bower_components/angular/angular.js"></script>
 <script src="../bower_components/moment/min/moment-with-locales.min.js"></script>
